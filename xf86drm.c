@@ -54,10 +54,10 @@
 #include <sys/ioctl.h>
 #include <sys/time.h>
 #include <stdarg.h>
-#ifdef MAJOR_IN_MKDEV
+#if __has_include(<sys/mkdev.h>)
 #include <sys/mkdev.h>
 #endif
-#ifdef MAJOR_IN_SYSMACROS
+#if __has_include(<sys/sysmacros.h>)
 #include <sys/sysmacros.h>
 #endif
 #include <math.h>
